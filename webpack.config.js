@@ -1,4 +1,6 @@
-var path = require('path');
+let path = require('path');
+let HtmlWebpackPlugin = require('html-webpack-plugin');
+let ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 
 
 module.exports = {
@@ -27,6 +29,13 @@ module.exports = {
             ]
     },
     plugins: [
+        new HtmlWebpackPlugin({
+            title: 'Custom template',
+            template: path.join(__dirname, 'src/index.template.html')
+        }),
+        new ScriptExtHtmlWebpackPlugin({
+            defaultAttribute: 'defer'
+        })
 
     ],
     stats: {
