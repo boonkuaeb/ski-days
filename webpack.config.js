@@ -34,7 +34,7 @@ module.exports = {
             template: path.join(__dirname, 'src/index.template.html')
         }),
         new ScriptExtHtmlWebpackPlugin({
-            defaultAttribute: 'defer'
+            defaultAttribute: "defer"
         })
 
     ],
